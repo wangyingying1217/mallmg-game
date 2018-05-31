@@ -12,6 +12,7 @@
 .swiper-pagination-bullet {
   width: auto;
   height: auto;
+  outline: none;
   padding: 8px 0;
   position: relative;
   border-radius: 0;
@@ -52,27 +53,25 @@
 }
 
 .swiper-prev {
-  background-image: url(../img/right.png);
-  right: 10px;
-  left: auto;
+  background-image: url(../img/left.png);
+  left: 0;
 }
 
 .swiper-next {
-  background-image: url(../img/left.png);
-  left: 10px;
-  right: auto;
+  background-image: url(../img/right.png);
+  right: 0;
 }
 
 .swiper-prev, .swiper-next {
   position: absolute;
   outline: none;
   top: 50%;
-  width: 56px;
-  height: 88px;
-  margin-top: -28px;
+  width: 36px;
+  height: 60px;
+  margin-top: -30px;
   z-index: 10;
   cursor: pointer;
-  background-size: auto;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -111,18 +110,17 @@
       padding: 38px 6px 0;
       margin-left: 74px;
       text-align: center;
+      color: #fff;
+      font-size: 20px;
+      line-height: 30px;
       &:first-child {
         margin-left: 0;
       }
       &.act {
-        a {
-          color: $base21Color;
-        }
+        color: $base21Color;
       }
-      a {
-        color: #fff;
-        font-size: 20px;
-        line-height: 30px;
+      &:hover {
+        color: $base21Color;
       }
     }
   }
@@ -155,7 +153,12 @@
     box-shadow: inset 0 0 2px rgba(9, 2, 4, 0.75);
   }
   .banner-swiper-container {
-    position: relative
+    position: relative;
+    .swiper-prev, .swiper-next {
+      width: 50px;
+      height: 88px;
+      margin-top: -28px;
+    }
   }
   .brand-swiper-container {
     float: left;
