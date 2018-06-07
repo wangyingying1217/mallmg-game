@@ -7,41 +7,18 @@
   background: rgba(0, 0, 0, 0.6); }
 
 .swiper-pagination-bullet {
-  width: auto;
-  height: auto;
+  display: inline-block;
+  width: 12px;
+  height: 100%;
   outline: none;
-  padding: 8px 0;
-  position: relative;
+  padding: 0;
   border-radius: 0;
-  background: transparent;
+  background: url("../img/23.png") no-repeat center center;
   opacity: 1;
   vertical-align: middle; }
-  .swiper-pagination-bullet:before {
-    content: '';
-    width: 0;
-    height: 0;
-    display: block;
-    border-width: 6px;
-    border-style: solid;
-    border-color: transparent;
-    border-bottom-color: #fff; }
-  .swiper-pagination-bullet:after {
-    content: '';
-    width: 0;
-    height: 0;
-    display: block;
-    border-width: 6px;
-    border-style: solid;
-    border-color: transparent;
-    border-top-color: #fff; }
   .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    padding: 4px 4px; }
-    .swiper-pagination-bullet.swiper-pagination-bullet-active:before {
-      border-width: 8px;
-      border-bottom-color: #cfb57a; }
-    .swiper-pagination-bullet.swiper-pagination-bullet-active:after {
-      border-width: 8px;
-      border-top-color: #cfb57a; }
+    width: 18px;
+    background: url("../img/18.png") no-repeat center center; }
 
 .swiper-prev {
   background-image: url(../img/left.png);
@@ -237,13 +214,15 @@
       font-size: 12px;
       color: #333;
       line-height: 16px; }
-  .part.part1 .link {
+  .part .part-con {
+    position: relative; }
+  .part.part-ours .link {
     float: right;
     width: 700px;
     height: 304px;
     padding: 1px 0 0 4px;
     background: url("../img/10.png") no-repeat 0 0; }
-    .part.part1 .link li {
+    .part.part-ours .link li {
       float: left;
       height: 151px;
       text-align: center;
@@ -251,7 +230,7 @@
       margin: 0 1px -1px 0;
       font-size: 20px;
       line-height: 36px; }
-      .part.part1 .link li:hover {
+      .part.part-ours .link li:hover {
         padding: 0;
         line-height: 151px;
         font-size: 24px;
@@ -259,23 +238,23 @@
         background: url("../img/11.png") no-repeat center center;
         background-size: 101% 101%;
         overflow: hidden; }
-        .part.part1 .link li:hover img {
+        .part.part-ours .link li:hover img {
           display: none; }
-  .part.part2 .information-list {
+  .part.part-activite .information-list {
     float: right;
     width: 700px;
     height: 304px;
     padding-left: 46px; }
-    .part.part2 .information-list dt {
+    .part.part-activite .information-list dt {
       margin-top: -10px;
       margin-bottom: 20px; }
-    .part.part2 .information-list dd {
+    .part.part-activite .information-list dd {
       position: relative;
       line-height: 40px;
       font-size: 16px;
       color: #333;
       padding-left: 12px; }
-      .part.part2 .information-list dd:before {
+      .part.part-activite .information-list dd:before {
         content: "";
         position: absolute;
         background-color: #d3b47d;
@@ -283,55 +262,93 @@
         height: 14px;
         left: 0;
         top: 13px; }
-      .part.part2 .information-list dd:hover .text {
+      .part.part-activite .information-list dd:hover .text {
         text-decoration: underline; }
-      .part.part2 .information-list dd .text {
+      .part.part-activite .information-list dd .text {
         float: left;
         width: 460px;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap; }
-  .part.part3 .video-box {
+  .part.part-video .video-box {
     float: right;
     width: 700px;
     height: 304px;
     padding-left: 8px; }
-    .part.part3 .video-box .video {
+    .part.part-video .video-box .video {
       margin-bottom: 4px;
       margin-left: 32px; }
-  .part.part4 .information-list {
-    float: right;
-    width: 700px;
-    height: 304px;
-    padding-left: 46px; }
-    .part.part4 .information-list .concern {
-      float: left;
-      width: 144px;
-      height: 194px;
-      margin-left: 10px;
-      color: #fff;
-      font-size: 18px;
-      text-align: center;
-      background: url("../img/20.png") no-repeat center center; }
-      .part.part4 .information-list .concern img {
-        margin: 14px 0; }
-      .part.part4 .information-list .concern p {
-        line-height: 38px; }
-    .part.part4 .information-list dt {
-      margin-bottom: 6px; }
-    .part.part4 .information-list dd {
-      line-height: 40px;
-      font-size: 16px;
-      color: #333;
-      width: 480px; }
-      .part.part4 .information-list dd:hover .text {
-        text-decoration: underline; }
-      .part.part4 .information-list dd .text {
-        float: left;
-        width: 348px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap; }
+  .part.part-feature {
+    overflow: hidden;
+    position: relative; }
+    .part.part-feature .feature-container {
+      max-width: 1000px;
+      margin: 0 auto; }
+      .part.part-feature .feature-container .swiper-prev {
+        background-image: url(../img/left1.png);
+        left: 0; }
+      .part.part-feature .feature-container .swiper-next {
+        background-image: url(../img/right1.png);
+        right: 0; }
+    .part.part-feature .slide {
+      width: 100%;
+      min-height: 180px;
+      overflow: hidden;
+      position: relative; }
+    .part.part-feature .slide .img {
+      overflow: hidden;
+      position: absolute;
+      transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s, z-index 0.4s; }
+    .part.part-feature .slide .img img {
+      width: calc(100% - 14px);
+      height: calc(100% - 14px);
+      margin: 7px; }
+    .part.part-feature .slide .img1 {
+      width: 40%;
+      height: 40%;
+      top: 30%;
+      left: -50%;
+      z-index: 1; }
+    .part.part-feature .slide .img2 {
+      width: 60%;
+      height: 60%;
+      top: 20%;
+      left: -20%;
+      z-index: 2; }
+    .part.part-feature .slide .img3 {
+      width: 80%;
+      height: 80%;
+      top: 10%;
+      left: 10%;
+      z-index: 3; }
+    .part.part-feature .slide .img4 {
+      width: 60%;
+      height: 60%;
+      top: 20%;
+      left: 60%;
+      z-index: 2; }
+    .part.part-feature .slide .img5 {
+      width: 40%;
+      height: 40%;
+      top: 30%;
+      left: 110%;
+      z-index: 1; }
+    .part.part-feature .slide-bt {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      z-index: 10; }
+    .part.part-feature .slide-bt span {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      outline: none;
+      margin: 0 2px;
+      background: url("../img/24.png") no-repeat center center;
+      opacity: 1;
+      vertical-align: middle; }
+    .part.part-feature .slide .slide-bt .on {
+      background: url("../img/18.png") no-repeat center center; }
 
 .footer {
   background: #000;

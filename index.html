@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/index.css">
     <script src="./js/index.js"></script>
+    <script src="./js/feature-swiper.js"></script>
 </head>
 <body>
 <div class="nav">
@@ -47,28 +48,18 @@
 <div class="banner">
     <div class="banner-swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img width="1920" height="1080"
-                                           src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt=""></div>
-            <div class="swiper-slide"><img width="1920" height="1080"
-                                           src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt=""></div>
-            <div class="swiper-slide"><img width="1920" height="1080"
-                                           src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt=""></div>
+            <div class="swiper-slide"><img width="1920" height="1080" src="./img/bg.jpg" alt=""></div>
         </div>
-        <div class="swiper-prev"></div>
-        <div class="swiper-next"></div>
+        <!--<div class="swiper-prev"></div>-->
+        <!--<div class="swiper-next"></div>-->
     </div>
     <div class="brand">
         <div class="brand-swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img width="500" height="340"
-                                               src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
-                </div>
-                <div class="swiper-slide"><img width="500" height="340"
-                                               src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
-                </div>
-                <div class="swiper-slide"><img width="500" height="340"
-                                               src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
-                </div>
+                <div class="swiper-slide"><img width="500" height="340" src="./img/banner1.jpg" alt=""></div>
+                <div class="swiper-slide"><img width="500" height="340" src="./img/banner2.jpg" alt=""></div>
+                <div class="swiper-slide"><img width="500" height="340" src="./img/banner3.jpg" alt=""></div>
+                <div class="swiper-slide"><img width="500" height="340" src="./img/banner4.jpg" alt=""></div>
             </div>
             <div class="swiper-prev"></div>
             <div class="swiper-next"></div>
@@ -117,20 +108,15 @@
         </div>
     </div>
 </div>
-<div class="part part1">
+<div class="part part-ours">
     <div class="part-tit"><img src="./img/5.png" alt=""></div>
     <div class="part-con clear-fix">
         <div class="part-swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img width="500" height="304"
-                                               src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
-                </div>
-                <div class="swiper-slide"><img width="500" height="304"
-                                               src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
-                </div>
-                <div class="swiper-slide"><img width="500" height="304"
-                                               src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
-                </div>
+                <div class="swiper-slide"><img width="500" height="340" src="./img/banner1.jpg" alt=""></div>
+                <div class="swiper-slide"><img width="500" height="340" src="./img/banner2.jpg" alt=""></div>
+                <div class="swiper-slide"><img width="500" height="340" src="./img/banner3.jpg" alt=""></div>
+                <div class="swiper-slide"><img width="500" height="340" src="./img/banner4.jpg" alt=""></div>
             </div>
             <div class="swiper-prev"></div>
             <div class="swiper-next"></div>
@@ -152,20 +138,33 @@
         </ul>
     </div>
 </div>
-<div class="part part2">
+<div class="part part-feature">
+    <div class="part-tit"><img src="./img/8.png" alt=""><a class="more" href="javascript:void(0);">更多</a></div>
+    <div class="part-con clear-fix">
+        <div class="feature-container">
+            <div id="slide" class="slide" class="index-slide" alt="star">
+                <!-- 轮播图片数量可自行增减 -->
+
+                <div class="img"><img src="./img/game1.jpg"/></div>
+                <div class="img"><img src="./img/game2.jpg"/></div>
+                <div class="img"><img src="./img/game3.jpg"/></div>
+
+                <div class="slide-bt"></div>
+            </div>
+            <div class="swiper-prev" onclick="left()"></div>
+            <div class="swiper-next" onclick="right()"></div>
+        </div>
+    </div>
+</div>
+<div class="part part-activite">
     <div class="part-tit"><img src="./img/6.png" alt=""><a class="more" href="javascript:void(0);">更多</a></div>
     <div class="part-con clear-fix">
         <div class="part-swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img width="500" height="304"
-                                               src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
-                </div>
-                <div class="swiper-slide"><img width="500" height="304"
-                                               src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
-                </div>
-                <div class="swiper-slide"><img width="500" height="304"
-                                               src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
-                </div>
+                <div class="swiper-slide"><img width="500" height="340" src="./img/banner1.jpg" alt=""></div>
+                <div class="swiper-slide"><img width="500" height="340" src="./img/banner2.jpg" alt=""></div>
+                <div class="swiper-slide"><img width="500" height="340" src="./img/banner3.jpg" alt=""></div>
+                <div class="swiper-slide"><img width="500" height="340" src="./img/banner4.jpg" alt=""></div>
             </div>
             <div class="swiper-prev"></div>
             <div class="swiper-next"></div>
@@ -189,20 +188,15 @@
         </dl>
     </div>
 </div>
-<div class="part part3">
+<div class="part part-video">
     <div class="part-tit"><img src="./img/7.png" alt=""><a class="more" href="javascript:void(0);">更多</a></div>
     <div class="part-con clear-fix">
         <div class="part-swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img width="500" height="304"
-                                               src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
-                </div>
-                <div class="swiper-slide"><img width="500" height="304"
-                                               src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
-                </div>
-                <div class="swiper-slide"><img width="500" height="304"
-                                               src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
-                </div>
+                <div class="swiper-slide"><img width="500" height="340" src="./img/banner1.jpg" alt=""></div>
+                <div class="swiper-slide"><img width="500" height="340" src="./img/banner2.jpg" alt=""></div>
+                <div class="swiper-slide"><img width="500" height="340" src="./img/banner3.jpg" alt=""></div>
+                <div class="swiper-slide"><img width="500" height="340" src="./img/banner4.jpg" alt=""></div>
             </div>
             <div class="swiper-prev"></div>
             <div class="swiper-next"></div>
@@ -210,8 +204,7 @@
         </div>
         <ul class="video-box">
             <li class="video"><a href="javascript:void(0);">
-                <img width="314" height="150"
-                     src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
+                <img width="314" height="150" src="./img/video1.jpg" alt="">
                 <img class="icon" src="./img/19.png" alt="">
                 <div class="info">
                     <p class="fl">阿布斗地主推广活动—第一期</p>
@@ -219,8 +212,7 @@
                 </div>
             </a></li>
             <li class="video"><a href="javascript:void(0);">
-                <img width="314" height="150"
-                     src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
+                <img width="314" height="150" src="./img/video2.jpg" alt="">
                 <img class="icon" src="./img/19.png" alt="">
                 <div class="info">
                     <p class="fl">阿布斗地主推广活动—第一期</p>
@@ -228,8 +220,7 @@
                 </div>
             </a></li>
             <li class="video"><a href="javascript:void(0);">
-                <img width="314" height="150"
-                     src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
+                <img width="314" height="150" src="./img/video3.jpg" alt="">
                 <img class="icon" src="./img/19.png" alt="">
                 <div class="info">
                     <p class="fl">阿布斗地主推广活动—第一期</p>
@@ -237,8 +228,7 @@
                 </div>
             </a></li>
             <li class="video"><a href="javascript:void(0);">
-                <img width="314" height="150"
-                     src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
+                <img width="314" height="150" src="./img/video4.jpg" alt="">
                 <img class="icon" src="./img/19.png" alt="">
                 <div class="info">
                     <p class="fl">阿布斗地主推广活动—第一期</p>
@@ -246,54 +236,6 @@
                 </div>
             </a></li>
         </ul>
-    </div>
-</div>
-<div class="part part4">
-    <div class="part-tit"><img src="./img/8.png" alt=""><a class="more" href="javascript:void(0);">更多</a></div>
-    <div class="part-con clear-fix">
-        <div class="part-swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img width="500" height="304"
-                                               src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
-                </div>
-                <div class="swiper-slide"><img width="500" height="304"
-                                               src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
-                </div>
-                <div class="swiper-slide"><img width="500" height="304"
-                                               src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
-                </div>
-            </div>
-            <div class="swiper-prev"></div>
-            <div class="swiper-next"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-        <dl class="information-list">
-            <dt class="clear-fix">
-                <div class="video"><a href="javascript:void(0);">
-                    <img width="346" height="192"
-                         src="http://www.5068.com/uploads/allimg/171124/1-1G1240US6.jpg" alt="">
-                    <img class="icon" src="./img/19.png" alt="">
-                    <div class="info">
-                        <p class="fl">阿布斗地主推广活动—第一期</p>
-                        <p class="fr">2018-5-30</p>
-                    </div>
-                </a></div>
-                <div class="concern">
-                    <img src="./img/21.png" alt="">
-                    <p>微博关注</p>
-                </div>
-                <div class="concern">
-                    <img src="./img/21.png" alt="">
-                    <p>微信关注</p>
-                </div>
-            </dt>
-            <dd><a href="javascript:void(0);" class="clear-fix"><span class="text">关于阿布斗地主赛事回放【5.10】</span><span
-                    class="fr">2017-5-30</span></a></dd>
-            <dd><a href="javascript:void(0);" class="clear-fix"><span class="text">关于阿布斗地主赛事回放【5.10】</span><span
-                    class="fr">2017-5-30</span></a></dd>
-            <dd><a href="javascript:void(0);" class="clear-fix"><span class="text">关于阿布斗地主赛事回放【5.10】</span><span
-                    class="fr">2017-5-30</span></a></dd>
-        </dl>
     </div>
 </div>
 <div class="footer">

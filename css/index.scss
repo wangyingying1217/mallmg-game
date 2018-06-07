@@ -10,45 +10,18 @@
 }
 
 .swiper-pagination-bullet {
-  width: auto;
-  height: auto;
+  display: inline-block;
+  width: 12px;
+  height: 100%;
   outline: none;
-  padding: 8px 0;
-  position: relative;
+  padding: 0;
   border-radius: 0;
-  background: transparent;
+  background: url("../img/23.png") no-repeat center center;
   opacity: 1;
   vertical-align: middle;
-  &:before {
-    content: '';
-    width: 0;
-    height: 0;
-    display: block;
-    border-width: 6px;
-    border-style: solid;
-    border-color: transparent;
-    border-bottom-color: #fff;
-  }
-  &:after {
-    content: '';
-    width: 0;
-    height: 0;
-    display: block;
-    border-width: 6px;
-    border-style: solid;
-    border-color: transparent;
-    border-top-color: #fff;
-  }
   &.swiper-pagination-bullet-active {
-    padding: 4px 4px;
-    &:before {
-      border-width: 8px;
-      border-bottom-color: #cfb57a;
-    }
-    &:after {
-      border-width: 8px;
-      border-top-color: #cfb57a;
-    }
+    width: 18px;
+    background: url("../img/18.png") no-repeat center center;
   }
 }
 
@@ -295,7 +268,11 @@
       }
     }
   }
-  &.part1 .link {
+  .part-con {
+    position: relative
+  }
+;
+  &.part-ours .link {
     float: right;
     width: 700px;
     height: 304px;
@@ -323,7 +300,7 @@
       }
     }
   }
-  &.part2 .information-list {
+  &.part-activite .information-list {
     float: right;
     width: 700px;
     height: 304px;
@@ -361,7 +338,7 @@
       }
     }
   }
-  &.part3 .video-box {
+  &.part-video .video-box {
     float: right;
     width: 700px;
     height: 304px;
@@ -371,47 +348,91 @@
       margin-left: 32px;
     }
   }
-  &.part4 .information-list {
-    float: right;
-    width: 700px;
-    height: 304px;
-    padding-left: 46px;
-    .concern {
-      float: left;
-      width: 144px;
-      height: 194px;
-      margin-left: 10px;
-      color: #fff;
-      font-size: 18px;
-      text-align: center;
-      background: url("../img/20.png") no-repeat center center;
-      img {
-        margin: 14px 0;
+  &.part-feature {
+    overflow: hidden;
+    position: relative;
+    .feature-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      .swiper-prev {
+        background-image: url(../img/left1.png);
+        left: 0;
       }
-      p {
-        line-height: 38px;
+      .swiper-next {
+        background-image: url(../img/right1.png);
+        right: 0;
       }
     }
-    dt {
-      margin-bottom: 6px;
+    .slide {
+      width: 100%;
+      min-height: 180px;
+      overflow: hidden;
+      position: relative;
+
     }
-    dd {
-      line-height: 40px;
-      font-size: 16px;
-      color: #333;
-      width: 480px;
-      &:hover {
-        .text {
-          text-decoration: underline;
-        }
-      }
-      .text {
-        float: left;
-        width: 348px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-      }
+    .slide .img {
+      overflow: hidden;
+      position: absolute;
+      transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s, z-index 0.4s;
+    }
+    .slide .img img {
+      width: calc(100% - 14px);
+      height: calc(100% - 14px);
+      margin: 7px;
+    }
+    .slide .img1 {
+      width: 40%;
+      height: 40%;
+      top: 30%;
+      left: -50%;
+      z-index: 1;
+    }
+    .slide .img2 {
+      width: 60%;
+      height: 60%;
+      top: 20%;
+      left: -20%;
+      z-index: 2;
+    }
+    .slide .img3 {
+      width: 80%;
+      height: 80%;
+      top: 10%;
+      left: 10%;
+      z-index: 3;
+    }
+    .slide .img4 {
+      width: 60%;
+      height: 60%;
+      top: 20%;
+      left: 60%;
+      z-index: 2;
+    }
+    .slide .img5 {
+      width: 40%;
+      height: 40%;
+      top: 30%;
+      left: 110%;
+      z-index: 1;
+    }
+    .slide-bt {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      z-index: 10;
+    }
+    .slide-bt span {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      outline: none;
+      margin: 0 2px;
+      background: url("../img/24.png") no-repeat center center;
+      opacity: 1;
+      vertical-align: middle;
+    }
+    .slide .slide-bt .on {
+      background: url("../img/18.png") no-repeat center center;
     }
   }
 }
