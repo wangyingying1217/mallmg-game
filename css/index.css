@@ -1,3 +1,9 @@
+@charset "UTF-8";
+.banner .information-list .text, .part.part-activite .information-list dd .text, .message-list .con {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+
 .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
   bottom: 0;
   left: 0;
@@ -50,24 +56,25 @@
 .w236 {
   width: 236px; }
 
+/*导航*/
 .nav {
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   z-index: 2;
-  height: 130px;
+  height: 95px;
   background: rgba(0, 0, 0, 0.85); }
   .nav .logo {
     float: left;
-    padding-top: 30px; }
+    padding-top: 13px; }
     .nav .logo img {
       display: block; }
   .nav .nav-list {
     float: right; }
     .nav .nav-list li {
       float: left;
-      padding: 38px 6px 0;
+      padding: 20px 6px 0;
       margin-left: 74px;
       text-align: center;
       color: #fff;
@@ -86,11 +93,22 @@
     font-size: 16px;
     line-height: 26px; }
 
+/*脚部*/
+.footer {
+  background: #000;
+  padding: 60px 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 140px; }
+  .footer p {
+    padding-left: 308px; }
+
+/*导航*/
 .banner {
   position: relative;
   max-width: 1920px;
   margin-bottom: 36px;
-  height: 1080px;
   overflow: hidden; }
   .banner .brand {
     width: 1200px;
@@ -145,17 +163,24 @@
           background: url("../img/4.png") no-repeat;
           background-size: 100%; }
   .banner .information-list li {
+    position: relative;
     line-height: 40px;
     font-size: 16px;
-    color: #fff; }
+    color: #fff;
+    padding-left: 8px; }
+    .banner .information-list li:before {
+      content: "";
+      position: absolute;
+      background-color: #d3b47d;
+      width: 3px;
+      height: 14px;
+      left: 0;
+      top: 13px; }
     .banner .information-list li:hover .text {
       text-decoration: underline; }
   .banner .information-list .text {
     float: left;
-    width: 294px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap; }
+    width: 294px; }
   .banner .download {
     float: right;
     width: 200px;
@@ -168,53 +193,42 @@
     display: block;
     margin: 0 0 -20px 7px; }
 
+/*首页内容*/
 .part {
   width: 1200px;
   margin: 0 auto;
-  margin-bottom: 80px; }
+  margin-bottom: 80px;
+  /*标题*/
+  /*主体内容*/
+  /*轮播*/
+  /*关于我们*/
+  /*活动中心*/
+  /*精彩视频*/
+  /*特色玩法*/ }
   .part .part-tit {
     position: relative;
-    margin-bottom: 32px; }
-    .part .part-tit img {
-      display: block; }
+    margin-bottom: 32px;
+    font-size: 0; }
+    .part .part-tit .line {
+      vertical-align: bottom;
+      position: relative;
+      top: -8px;
+      left: 2px; }
+    .part .part-tit .more {
+      font-size: 16px;
+      position: absolute;
+      right: 0;
+      bottom: 14px;
+      padding-right: 32px;
+      line-height: 32px;
+      background: url("../img/9.png") no-repeat right 6px; }
+  .part .part-con {
+    position: relative; }
   .part .part-swiper-container {
     width: 500px;
     height: 304px;
     overflow: hidden;
     float: left;
-    position: relative; }
-  .part .more {
-    font-size: 16px;
-    position: absolute;
-    right: 0;
-    bottom: 10px;
-    padding-right: 32px;
-    line-height: 32px;
-    background: url("../img/9.png") no-repeat right 6px; }
-  .part .video {
-    float: left;
-    position: relative; }
-    .part .video img {
-      display: block; }
-    .part .video .icon {
-      position: absolute;
-      z-index: 3;
-      left: 50%;
-      top: 50%;
-      margin-top: -30px;
-      margin-left: -30px; }
-    .part .video .info {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 2;
-      background: rgba(255, 255, 255, 0.8);
-      padding: 4px 10px;
-      font-size: 12px;
-      color: #333;
-      line-height: 16px; }
-  .part .part-con {
     position: relative; }
   .part.part-ours .link {
     float: right;
@@ -246,8 +260,10 @@
     height: 304px;
     padding-left: 46px; }
     .part.part-activite .information-list dt {
-      margin-top: -10px;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      padding: 8px 0 18px;
+      text-align: center;
+      background: url(../img/bg/border1.jpg) no-repeat center bottom; }
     .part.part-activite .information-list dd {
       position: relative;
       line-height: 40px;
@@ -266,18 +282,37 @@
         text-decoration: underline; }
       .part.part-activite .information-list dd .text {
         float: left;
-        width: 460px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap; }
+        width: 460px; }
   .part.part-video .video-box {
     float: right;
     width: 700px;
     height: 304px;
     padding-left: 8px; }
-    .part.part-video .video-box .video {
-      margin-bottom: 4px;
-      margin-left: 32px; }
+  .part.part-video .video {
+    float: left;
+    position: relative;
+    margin-bottom: 4px;
+    margin-left: 32px; }
+    .part.part-video .video img {
+      display: block; }
+    .part.part-video .video .icon {
+      position: absolute;
+      z-index: 3;
+      left: 50%;
+      top: 50%;
+      margin-top: -30px;
+      margin-left: -30px; }
+    .part.part-video .video .info {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 4px 10px;
+      font-size: 12px;
+      color: #333;
+      line-height: 16px; }
   .part.part-feature {
     overflow: hidden;
     position: relative; }
@@ -350,13 +385,81 @@
     .part.part-feature .slide .slide-bt .on {
       background: url("../img/18.png") no-repeat center center; }
 
-.footer {
-  background: #000;
-  padding: 60px 0;
-  color: #fff;
-  font-size: 14px;
-  line-height: 24px; }
-  .footer p {
-    padding-left: 308px; }
+/*建设中*/
+.building {
+  text-align: center;
+  line-height: 46px;
+  font-size: 20px;
+  margin: 140px 0; }
+  .building img {
+    vertical-align: sub;
+    margin-right: 10px; }
+
+/*新闻列表*/
+.message-list {
+  width: 1200px;
+  margin: 80px auto 0; }
+  .message-list dt {
+    position: relative;
+    font-size: 0; }
+    .message-list dt .line {
+      vertical-align: bottom;
+      position: relative;
+      top: -8px;
+      left: 2px; }
+  .message-list dd {
+    padding: 34px 10px 10px 0;
+    background: url("../img/bg/border.jpg") no-repeat center bottom; }
+  .message-list .tit {
+    line-height: 40px;
+    font-size: 20px; }
+  .message-list .con {
+    font-size: 16px;
+    padding-left: 60px;
+    line-height: 46px; }
+  .message-list .buttom-bar {
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px; }
+    .message-list .buttom-bar .time {
+      float: right;
+      color: #666; }
+
+.new {
+  width: 1200px;
+  margin: 80px auto 0; }
+  .new .title {
+    margin-bottom: 20px; }
+    .new .title .nav-box {
+      line-height: 36px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #d8c29b; }
+      .new .title .nav-box img {
+        float: left;
+        margin-right: 10px; }
+    .new .title .time {
+      color: #666;
+      margin-left: 44px;
+      line-height: 22px; }
+  .new .main .new-tit {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.4;
+    font-size: 26px;
+    font-family: "微软雅黑", "黑体";
+    font-weight: normal;
+    width: 80%; }
+  .new .main .new-con {
+    padding: 20px 40px; }
+    .new .main .new-con p {
+      font-size: 14px;
+      line-height: 28px;
+      text-indent: 2em;
+      margin-bottom: 10px; }
+    .new .main .new-con img {
+      vertical-align: middle; }
 
 /*# sourceMappingURL=index.css.map */

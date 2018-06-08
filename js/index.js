@@ -8,7 +8,7 @@ $(function () {
             prevEl: '.swiper-prev',
         },
     });*/
-    var brandSwiper = new Swiper('.brand-swiper-container', {
+    /*var brandSwiper = new Swiper('.brand-swiper-container', {
         autoplay: true,//可选选项，自动滑动
         simulateTouch: false,//可选选项，自动滑动
         loop: true,
@@ -20,9 +20,9 @@ $(function () {
             nextEl: '.swiper-next',
             prevEl: '.swiper-prev',
         },
-    });
+    });*/
 
-    var partSwiper = new Swiper('.part-swiper-container', {
+    /*var partSwiper = new Swiper('.part-swiper-container', {
         autoplay: true,//可选选项，自动滑动
         simulateTouch: false,//可选选项，自动滑动
         loop: true,
@@ -34,7 +34,7 @@ $(function () {
             nextEl: '.swiper-next',
             prevEl: '.swiper-prev',
         },
-    });
+    });*/
 
     $('.J_tab_new').click(function () {
         $(this).addClass('act').siblings().removeClass('act');

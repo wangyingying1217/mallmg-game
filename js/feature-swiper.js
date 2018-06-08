@@ -64,9 +64,18 @@ $(function () {
 
     //自动轮播
     if (autoLb) {
-        setInterval(function () {
+        var timer;
+        timer = setInterval(function () {
             right();
         }, autoLbtime * 1000);
+        $(".slide").parent().mouseover(function () {
+            clearInterval(timer);
+        });
+        $(".slide").parent().mouseout(function () {
+            timer = setInterval(function () {
+                right();
+            }, autoLbtime * 1000);
+        });
     }
 
 

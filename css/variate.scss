@@ -10,3 +10,8 @@ $base21Color: #d1b681;
 $base22Color: #4b330f;
 $elements: base, second, three, modal, nav, top;
 $false: false !default;
+%text-overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
