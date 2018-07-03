@@ -157,11 +157,12 @@
   .info {
     float: right;
     width: 670px;
+    padding-right: 30px;
   }
-  .information {
+  /*.information {
     float: left;
     width: 436px;
-  }
+  }*/
   .tab-bar {
     height: 62px;
     border-bottom: 2px solid #000;
@@ -213,23 +214,43 @@
     }
     .text {
       float: left;
-      width: 294px;
+      width: 450px;
       @extend %text-overflow;
     }
   }
   .download {
-    float: right;
-    width: 200px;
-    margin-right: 24px;
-    padding-top: 24px;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    margin-left: 270px;
+    z-index: 9;
+    padding: 44px 0 24px 34px;
+    width: 540px;
     text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    overflow: hidden;
   }
   .ercode {
+    float: left;
     margin-bottom: 10px;
   }
+  .ercode img {
+    width: 174px;
+  }
+  .ercode p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 2;
+  }
   .down-icon {
+    float: left;
+    margin-right: -22px;
+  }
+  .down-icon img {
     display: block;
-    margin: 0 0 -20px 7px;
+    margin-top: -6px;
+    margin-bottom: -10px;
   }
 }
 
@@ -559,17 +580,84 @@
       font-weight: normal;
       width: 80%;
     }
-    .new-con{
+    .new-con {
       padding: 20px 40px;
-      p{
+      p {
         font-size: 14px;
         line-height: 28px;
         text-indent: 2em;
         margin-bottom: 10px;
       }
-      img{
+      img {
         vertical-align: middle;
       }
     }
   }
+}
+
+/*下载*/
+.download {
+  .download-main {
+    padding-bottom: 24px;
+    margin-bottom: 40px;
+    background: url(../img/bg/border2.png) no-repeat center bottom;
+  }
+
+  .download-ercode {
+    float: left;
+    width: 260px;
+  }
+
+  .download-ercode img {
+    display: block;
+    width: 100%;
+  }
+
+  .download-intro {
+    overflow: hidden;
+  }
+
+  .download-intro img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .download-intro-main {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 48px;
+    margin-top: 10px;
+  }
+
+  .download-intro-text1 {
+    float: left;
+    margin-left: 100px;
+  }
+
+  .download-intro-text2 {
+    float: left;
+    margin-left: 140px;
+  }
+
+  .download-text dl {
+    padding-bottom: 12px;
+    font-weight: bold;
+  }
+  .download-text dt {
+    font-size: 20px;
+    padding: 6px 0;
+    line-height: 36px;
+  }
+  .download-text dt img {
+    vertical-align: -10px;
+    margin-right: 6px;
+  }
+  .download-text dd {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .download-text .indent{
+    text-indent: 2em;
+  }
+
 }
