@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.banner .information-list .text, .part.part-activite .information-list dd .text, .message-list .con {
+.banner .information-list .text, .part.part-activite .information-list dd .text, .part.part-video .video .info .tit, .message-list .con {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap; }
@@ -332,6 +332,11 @@
       font-size: 12px;
       color: #333;
       line-height: 16px; }
+      .part.part-video .video .info .tit {
+        float: left;
+        width: 60%; }
+      .part.part-video .video .info .time {
+        float: right; }
   .part.part-feature {
     overflow: hidden;
     position: relative; }
@@ -432,6 +437,8 @@
   .message-list .tit {
     line-height: 40px;
     font-size: 20px; }
+    .message-list .tit img {
+      margin-right: 20px; }
   .message-list .con {
     font-size: 16px;
     padding-left: 60px;
@@ -482,46 +489,330 @@
       vertical-align: middle; }
 
 /*下载*/
-.download .download-main {
+.download-wrapper .download-main {
   padding-bottom: 24px;
   margin-bottom: 40px;
   background: url(../img/bg/border2.png) no-repeat center bottom; }
-.download .download-ercode {
+.download-wrapper .download-ercode {
   float: left;
   width: 260px; }
-.download .download-ercode img {
+.download-wrapper .download-ercode img {
   display: block;
   width: 100%; }
-.download .download-intro {
+.download-wrapper .download-intro {
   overflow: hidden; }
-.download .download-intro img {
+.download-wrapper .download-intro img {
   display: block;
   margin: 0 auto; }
-.download .download-intro-main {
+.download-wrapper .download-intro-main {
   font-size: 22px;
   font-weight: bold;
   line-height: 48px;
   margin-top: 10px; }
-.download .download-intro-text1 {
+.download-wrapper .download-intro-text1 {
   float: left;
   margin-left: 100px; }
-.download .download-intro-text2 {
+.download-wrapper .download-intro-text2 {
   float: left;
   margin-left: 140px; }
-.download .download-text dl {
+.download-wrapper .download-text dl {
   padding-bottom: 12px;
   font-weight: bold; }
-.download .download-text dt {
+.download-wrapper .download-text dt {
   font-size: 20px;
   padding: 6px 0;
   line-height: 36px; }
-.download .download-text dt img {
+.download-wrapper .download-text dt img {
   vertical-align: -10px;
   margin-right: 6px; }
-.download .download-text dd {
+.download-wrapper .download-text dd {
   font-size: 16px;
   line-height: 28px; }
-.download .download-text .indent {
+.download-wrapper .download-text .indent {
   text-indent: 2em; }
+.download-wrapper .down-icon {
+  display: none; }
+
+@media (max-width: 767px) {
+  .wrapper {
+    width: 100%; }
+
+  .nav {
+    height: 44px; }
+    .nav .logo {
+      display: none;
+      padding-top: 12px;
+      padding-left: 12px; }
+      .nav .logo img {
+        height: 30px; }
+    .nav .nav-list {
+      float: none;
+      display: flex;
+      justify-content: space-around; }
+      .nav .nav-list li {
+        padding: 0;
+        margin: 0; }
+    .nav .name-c {
+      font-size: 14px;
+      line-height: 44px; }
+    .nav .name-e {
+      display: none; }
+
+  .banner {
+    width: 100%;
+    max-width: 1920px;
+    margin-bottom: 36px;
+    margin-top: 44px;
+    overflow: hidden; }
+    .banner .download {
+      position: absolute;
+      top: auto;
+      left: auto;
+      bottom: 10px;
+      right: 10px;
+      margin-left: 0;
+      z-index: 9;
+      padding: 0;
+      width: auto;
+      height: auto;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 4px;
+      overflow: hidden;
+      font-size: 0; }
+      .banner .download .ercode {
+        display: none; }
+      .banner .download .down-icon {
+        float: none;
+        margin: 0;
+        padding-top: 6px; }
+      .banner .download .down-icon img {
+        display: block;
+        height: 50px;
+        margin: 0; }
+
+  .brand {
+    display: none; }
+
+  /*首页内容*/
+  .part {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    /*标题*/
+    /*主体内容*/
+    /*关于我们*/
+    /*活动中心*/
+    /*精彩视频*/ }
+    .part .part-tit {
+      position: relative;
+      margin: 0 10px 20px;
+      font-size: 0; }
+      .part .part-tit .text {
+        width: 30%; }
+      .part .part-tit .line {
+        width: 70%; }
+      .part .part-tit .more {
+        font-size: 16px;
+        position: absolute;
+        right: 0;
+        bottom: 14px;
+        padding-right: 32px;
+        line-height: 32px;
+        background: url("../img/9.png") no-repeat right 6px; }
+    .part .part-con {
+      position: relative;
+      margin: 0 10px; }
+      .part .part-con .part-swiper-container {
+        display: none; }
+    .part.part-ours .link {
+      float: none;
+      width: 100%;
+      height: auto;
+      background: none;
+      overflow: hidden; }
+      .part.part-ours .link li, .part.part-ours .link li:hover {
+        float: left;
+        width: 33.33%;
+        height: auto;
+        text-align: center;
+        padding: 16px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 22px;
+        background: none; }
+        .part.part-ours .link li img, .part.part-ours .link li:hover img {
+          display: inline-block;
+          height: 24px; }
+    .part.part-activite .information-list {
+      float: none;
+      width: 100%;
+      height: auto;
+      padding: 0; }
+      .part.part-activite .information-list dt {
+        display: none; }
+      .part.part-activite .information-list dd {
+        line-height: 32px;
+        font-size: 14px;
+        padding-left: 8px; }
+        .part.part-activite .information-list dd:before {
+          top: 9px; }
+        .part.part-activite .information-list dd .text {
+          width: 70%; }
+    .part.part-video .video-box {
+      float: none;
+      width: 100%;
+      height: auto; }
+    .part.part-video .video {
+      margin-bottom: 4px;
+      width: 50%;
+      margin-left: 0;
+      box-sizing: border-box; }
+      .part.part-video .video:nth-of-type(2n) {
+        padding-left: 2px; }
+      .part.part-video .video:nth-of-type(2n+1) {
+        padding-right: 2px; }
+      .part.part-video .video img {
+        width: 100%;
+        display: block; }
+      .part.part-video .video .icon {
+        position: absolute;
+        z-index: 3;
+        left: 50%;
+        top: 50%;
+        margin-top: -30px;
+        margin-left: -30px;
+        width: 36px; }
+      .part.part-video .video .info {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 4px 4px;
+        font-size: 12px;
+        color: #333;
+        line-height: 16px; }
+
+  .footer {
+    padding: 20px 0;
+    font-size: 12px;
+    line-height: 20px;
+    margin-top: 40px; }
+    .footer p {
+      padding: 0 20px; }
+
+  /*新闻列表*/
+  .message-list {
+    width: 100%;
+    margin: 0; }
+    .message-list dt {
+      position: relative;
+      margin: 0 10px 10px;
+      font-size: 0; }
+      .message-list dt .text {
+        width: 30%; }
+      .message-list dt .line {
+        width: 70%; }
+    .message-list dd {
+      margin: 0 10px;
+      padding: 10px 0;
+      background: url("../img/bg/border.jpg") no-repeat center bottom/100%; }
+    .message-list .tit {
+      height: 24px;
+      line-height: 24px;
+      font-size: 14px; }
+      .message-list .tit img {
+        width: 24px;
+        margin-right: 10px; }
+    .message-list .con {
+      font-size: 12px;
+      padding-left: 34px;
+      line-height: 1.6; }
+    .message-list .buttom-bar {
+      height: 20px;
+      line-height: 20px;
+      font-size: 12px; }
+      .message-list .buttom-bar .time {
+        float: right;
+        color: #666; }
+
+  .building {
+    font-size: 16px; }
+
+  .new {
+    width: auto;
+    margin: 0 10px; }
+    .new .title {
+      margin-bottom: 12px; }
+      .new .title .nav-box {
+        line-height: 20px;
+        padding-bottom: 8px;
+        font-size: 14px;
+        border-bottom: 2px solid #d8c29b; }
+        .new .title .nav-box img {
+          float: left;
+          margin-right: 10px;
+          height: 20px; }
+      .new .title .time {
+        font-size: 14px;
+        margin-left: 28px; }
+    .new .main .new-tit {
+      margin-top: 10px;
+      margin-bottom: 6px;
+      line-height: 1.4;
+      font-size: 16px;
+      width: 100%; }
+    .new .main .new-con {
+      padding: 0; }
+      .new .main .new-con p {
+        font-size: 12px;
+        line-height: 1.6;
+        text-indent: 2em;
+        margin-bottom: 8px; }
+      .new .main .new-con img {
+        vertical-align: middle; }
+
+  .download-wrapper .download-main {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    background: url(../img/bg/border2.png) no-repeat center bottom; }
+  .download-wrapper .download-ercode {
+    float: left;
+    width: 260px;
+    display: none; }
+  .download-wrapper .download-ercode img {
+    display: block;
+    width: 100%; }
+  .download-wrapper .download-intro {
+    overflow: hidden; }
+  .download-wrapper .download-intro img {
+    width: 100px; }
+  .download-wrapper .download-intro-main {
+    font-size: 14px;
+    line-height: 2; }
+  .download-wrapper .download-intro-text1 {
+    float: left;
+    margin-left: 0; }
+  .download-wrapper .download-intro-text2 {
+    float: left;
+    margin-left: 0; }
+  .download-wrapper .download-text dt {
+    font-size: 14px;
+    line-height: 24px; }
+  .download-wrapper .download-text dt img {
+    vertical-align: -6px;
+    margin-right: 6px;
+    width: 24px; }
+  .download-wrapper .download-text dd {
+    font-size: 12px;
+    line-height: 2; }
+  .download-wrapper .down-icon {
+    display: block;
+    text-align: center;
+    margin: 10px auto 0; }
+    .download-wrapper .down-icon img {
+      height: 50px; } }
 
 /*# sourceMappingURL=index.css.map */

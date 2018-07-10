@@ -1,4 +1,13 @@
 $(function () {
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    if (isAndroid) {
+        $(".J_ios").hide();
+    } else if (isiOS) {
+        $(".J_android").hide();
+    }
+
     /*var mySwiper = new Swiper('.banner-swiper-container', {
         autoplay: true,//可选选项，自动滑动
         simulateTouch: false,//可选选项，自动滑动
