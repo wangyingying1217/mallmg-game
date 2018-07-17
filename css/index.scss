@@ -591,14 +591,17 @@
     }
     .new-con {
       padding: 20px 40px;
+      text-align: center;
       p {
         font-size: 14px;
         line-height: 28px;
         text-indent: 2em;
         margin-bottom: 10px;
+        text-align: left;
       }
       img {
         vertical-align: middle;
+        max-width: 100%;
       }
     }
   }

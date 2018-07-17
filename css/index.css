@@ -479,14 +479,17 @@
     font-weight: normal;
     width: 80%; }
   .new .main .new-con {
-    padding: 20px 40px; }
+    padding: 20px 40px;
+    text-align: center; }
     .new .main .new-con p {
       font-size: 14px;
       line-height: 28px;
       text-indent: 2em;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      text-align: left; }
     .new .main .new-con img {
-      vertical-align: middle; }
+      vertical-align: middle;
+      max-width: 100%; }
 
 /*下载*/
 .download-wrapper .download-main {
